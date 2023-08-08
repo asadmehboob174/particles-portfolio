@@ -42,11 +42,7 @@ const ParticlesContainer = () => {
                             enable: true,
                             mode: "repulse",
                             
-                            parallax	:	{
-                              enable	:	true,
-                              force	:	60,
-                              smooth	:	10
-                            }
+                            
                           
                         },
                         resize: true,
