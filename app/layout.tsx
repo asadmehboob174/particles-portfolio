@@ -1,7 +1,14 @@
+import Header from '@/components/header'
 import './globals.css'
-import { Inter } from 'next/font/google'
+import { Sora } from 'next/font/google'
+import ParticlesContainer from '@/components/particles-container'
+import Navigation from '@/components/navigation'
 
-const inter = Inter({ subsets: ['latin'] })
+const sora = Sora({ 
+  subsets: ['latin'] ,
+  variable: '--font-sora',
+  weight : ['100', '200', '300', '400', '500', '600', '700', '800']
+})
 
 export const metadata = {
   title: 'Create Next App',
@@ -15,7 +22,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${sora.className} overflow-hidden leading-relaxed font-sora`}>
+        <div className='w-full h-screen bg-gradient-to-br from-[#43115C] from-5% via-via-mixer via-25% to-[#0A010F] to-90%
+           opacity-90 -z-[50]
+         '>
+          <ParticlesContainer />
+          <Header />
+          <Navigation />
+          {children}
+          </div>
+        </body>
     </html>
   )
 }
