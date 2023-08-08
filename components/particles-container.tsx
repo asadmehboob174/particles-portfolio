@@ -21,7 +21,7 @@ const ParticlesContainer = () => {
 
     return (
         <Particles
-            className='hidden sm:block w-[70%] h-full absolute top-20 right-24 translate-z-0 -z-[10]'
+            className=' w-full h-full absolute top-20 sm:right-24 translate-z-0 -z-[10]'
             id="tsparticles"
             init={particlesInit}
             loaded={particlesLoaded}
@@ -73,14 +73,14 @@ const ParticlesContainer = () => {
                 particles: {
                   
                     color: {
-                        value: "#FFF",
+                        value: "#F3F2F1",
                     },
                     links: {
                         color: "#F8C471",
                         distance: 150,
                         enable: true,
-                        opacity: 0,
-                        width: 1.5,
+                        opacity: 0.4,
+                        width: 1.4,
                     },
                     collisions: {
                       enable: true,
@@ -100,7 +100,7 @@ const ParticlesContainer = () => {
                             enable: true,
                             area: 800,
                         },
-                        value: 99,
+                        value: 90,
                     },
                     opacity: {
                         value: 0.5,
